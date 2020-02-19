@@ -12,8 +12,8 @@ body {
   src: url("./fonts/klavika-bold-webfont.woff");
 }
 
-.center-block {
-  display: flex;
+.main-table {
+  display: table;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,5 +31,11 @@ body {
   display: flex;
   justify-content: center;
   font-family: klavika-bold;
-  color: lightgray;
+}
+
+.monk-header > h1 {
+  display: inline;
+  border: 2px solid;
+  border-radius: 10px;
+  color: white;
 }
