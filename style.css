@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  background-image: url("./images/U3MuIV.png");
+  background-size: cover;
+}
+
+@font-face {
+  font-family: klavika-bold;
+  src: url("./fonts/klavika-bold-webfont.woff");
+}
+
+.center-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  min-height: 80vh;
+  min-width: 100vh;
+  border: 2px gray solid;
+}
+
+.monk-header {
+  display: flex;
+  justify-content: center;
+  font-family: klavika-bold;
+  color: lightgray;
+}
