@@ -12,6 +12,10 @@ body {
   src: url("./fonts/klavika-bold-webfont.woff");
 }
 
+row {
+  border: 2px solid white;
+}
+
 .main-table {
   display: table;
   flex-direction: column;
@@ -38,4 +42,8 @@ body {
   border: 2px solid;
   border-radius: 10px;
   color: white;
+}
+
+.cell {
+  border: 2px solid white;
 }
