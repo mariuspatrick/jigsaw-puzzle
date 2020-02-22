@@ -26,8 +26,8 @@ row {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  min-height: 80vh;
-  min-width: 100vh;
+  /* min-height: 80vh;
+  min-width: 100vh; */
   border: 2px black solid;
   width: 960px;
   height: 760px;
@@ -63,16 +63,24 @@ row {
 .tile14,
 .tile15 {
   border: 1px solid white;
+  
+  /* float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: url("/images/monks.jpg") no-repeat 0 0 fixed; */
 }
 
 .tile1 {
   width: 240px;
   height: 190px;
   background: url("./images/monks.jpg");
-  background-position: left top;
-}
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 25% 25%;
+}  
 
-.tile2 {
+ .tile2 {
 }
 
 .tile3 {
@@ -112,4 +120,4 @@ row {
 }
 
 .tile15 {
-}
+} */
