@@ -26,8 +26,10 @@
 //   }
 // }
 
-function myMove() {
-  console.log("this:", document.getElementsByClassName("white-cell"));
+let table = document.getElementById("table");
 
-  //   console.log(x);
-}
+let cell = document.getElementsByClassName("tile-1");
+
+// let rowsLength = table.getElementsByClassName("row-1").cell;
+
+console.log("table: ", cell);

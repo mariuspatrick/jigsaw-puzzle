@@ -12,9 +12,9 @@ body {
   src: url("./fonts/klavika-bold-webfont.woff");
 }
 
-row {
+/* row {
   border: 2px solid white;
-}
+} */
 
 .main-table {
   display: table;
@@ -26,11 +26,9 @@ row {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  /* min-height: 80vh;
-  min-width: 100vh; */
   border: 2px black solid;
-  width: 960px;
-  height: 760px;
+  width: 500px;
+  height: 500px;
 }
 
 .monk-header {
@@ -72,8 +70,6 @@ row {
 }
 
 .tile1 {
-  width: 240px;
-  height: 190px;
   background: url("./images/monks.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
