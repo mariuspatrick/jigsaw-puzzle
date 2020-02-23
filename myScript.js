@@ -18,38 +18,20 @@ getElementStyle = element => {
 };
 
 switchStyles = (firstCell, secondCell) => {
-    let temporaryCell = getElementStyle(firstCell)
-    getElementStyle(firstCell) = 
-}
+  let temporaryCell = getElementStyle(firstCell).backgroundColor;
+  getElementStyle(firstCell).backgroundColor = getElementStyle(
+    secondCell
+  ).backgroundColor;
+  getElementStyle(secondCell).backgroundColor = temporaryCell;
+};
 
 function moveCell(firstCell, secondCell) {
   //Checks if secondCell has white background color and swaps cells
 
   if (getElementStyle(secondCell).backgroundColor == "white") {
-    // getElement(secondCell).innerHTML = getElement(firstCell).innerHTML;
-
-    let temporaryCell = getElement(firstCell).className;
-
-    getElement(firstCell).className = getElement(secondCell).className;
-
-    getElement(secondCell).className = temporaryCell;
-
-    //console.log("my table: ", document.getElementsByClassName("main-table"));
-
-    // let row = document.getElementsByClassName(row);
-    // console.log("rows: ", row);
-
-    // let table = document.getElementsByClassName("row").rows.length;
-    // console.log("table", table);
+    switchStyles(firstCell, secondCell);
 
     console.log("this is the elem: ", getElement(secondCell).className);
-
-    // getElement(firstCell).innerHTML = "";
-
-    // getElementStyle(secondCell).backgroundColor = getElementStyle(
-    //   firstCell
-    // ).backgroundColor;
-    // getElementStyle(firstCell).backgroundColor = "white";
   } else {
     console.log("Error! Try a different cell.");
     console.log("this is the elem: ", getElement(firstCell).className);
@@ -57,11 +39,17 @@ function moveCell(firstCell, secondCell) {
 }
 
 function clickTile(row, column) {
-  let cell = document.getElementById("cell" + "-" + row + "-" + column);
-  let tile = cell.className;
+  for (let i = 1; i <= row; i++) {
+    for (let j = 1; j <= column; j++) {
+      let whiteCell = getElementStyle(`"cell-"${row}"-"${column}"-"`)
+        .backgroundColor;
 
-  console.log("cell: ", cell);
-
-  if (tile != "tile16") {
+      if (
+        getElementStyle(`"cell-"${row}"-"${column}"-"`).backgroundColor ==
+        "white"
+      ) {
+        switchStyles();
+      }
+    }
   }
 }
