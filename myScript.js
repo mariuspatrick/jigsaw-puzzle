@@ -13,16 +13,22 @@ getElement = element => {
   return document.getElementById(element);
 };
 
+getElementStyle = element => {
+  return document.getElementById(element).style;
+};
+
 function moveCell(firstCell, secondCell) {
-  console.log("firstCell: ", firstCell);
-  console.log("secondCell: ", getElement(secondCell));
-  if (getElement(secondCell).style.backgroundColor == "white") {
+  //Checks if secondCell has white background color and swaps cells
+
+  if (getElementStyle(secondCell).backgroundColor == "white") {
     getElement(secondCell).innerHTML = getElement(firstCell).innerHTML;
 
+    console.log("my table: ", document.getElementsByClassName("main-table"));
+
     getElement(firstCell).innerHTML = "";
-    getElement(secondCell).style.backgroundColor = getElement(
+    getElementStyle(secondCell).backgroundColor = getElementStyle(
       firstCell
-    ).style.backgroundColor;
+    ).backgroundColor;
     getElement(firstCell).style.backgroundColor = "white";
   } else {
     console.log("Error! Try a different cell.");
@@ -38,5 +44,3 @@ function clickTile(row, column) {
   if (tile != "tile16") {
   }
 }
-
-console.log("this is x: ", document.getElementById("table").row);
