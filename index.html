@@ -6,12 +6,14 @@
     <title>Puzzle Time</title>
   </head>
   <body>
-    <div class="monk-header">
+    <div id="table" class="monk-header">
       <h1>Monk Puzzle</h1>
     </div>
     <div id="table" class="main-table">
       <div class="row-1" style="display: table-row;">
-        <div class="tile1" id="cell-1-1" style="display: table-cell;"></div>
+        <div class="tile1" id="cell-1-1" style="display: table-cell;">
+          Cell1
+        </div>
         <div class="tile2" id="cell-1-2" style="display: table-cell;">
           Cell2
         </div>
@@ -23,51 +25,51 @@
         </div>
       </div>
       <div class="row-2" style="display: table-row;">
-        <div class="tile5" id="cell-2-5" style="display: table-cell;">
+        <div class="tile5" id="cell-2-1" style="display: table-cell;">
           Cell5
         </div>
-        <div class="tile6" id="cell-2-6" style="display: table-cell;">
+        <div class="tile6" id="cell-2-2" style="display: table-cell;">
           Cell6
         </div>
-        <div class="tile7" id="cell-2-7" style="display: table-cell;">
+        <div class="tile7" id="cell-2-3" style="display: table-cell;">
           Cell7
         </div>
-        <div class="tile8" id="cell-2-8" style="display: table-cell;">
+        <div class="tile8" id="cell-2-4" style="display: table-cell;">
           Cell8
         </div>
       </div>
       <div class="row-3" style="display: table-row;">
-        <div class="tile9" id="cell-3-9" style="display: table-cell;">
+        <div class="tile9" id="cell-3-1" style="display: table-cell;">
           Cell9
         </div>
-        <div class="tile10" id="cell-3-10" style="display: table-cell;">
+        <div class="tile10" id="cell-3-2" style="display: table-cell;">
           Cell10
         </div>
-        <div class="tile11" id="cell-3-11" style="display: table-cell;">
+        <div class="tile11" id="cell-3-3" style="display: table-cell;">
           Cell11
         </div>
-        <div class="tile12" id="cell-3-12" style="display: table-cell;">
+        <div class="tile12" id="cell-3-4" style="display: table-cell;">
           Cell12
         </div>
       </div>
       <div class="row-4" style="display: table-row;">
-        <div class="tile13" id="cell-4-13" style="display: table-cell;">
+        <div class="tile13" id="cell-4-1" style="display: table-cell;">
           Cell13
         </div>
-        <div class="tile14" id="cell-4-14" style="display: table-cell;">
+        <div class="tile14" id="cell-4-2" style="display: table-cell;">
           Cell14
         </div>
         <div
-          id="cell-4-15"
+          id="cell-4-3"
           class="tile15"
-          onclick="myMove()"
+          onclick="moveCell('cell-4-3', 'cell-4-4')"
           style="display: table-cell;"
         >
           Cell15
         </div>
         <div
-          id="cell-4-16"
-          class="tile16 white-cell"
+          id="cell-4-4"
+          class="tile16"
           style="display: table-cell; background-color: white"
         ></div>
       </div>

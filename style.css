@@ -12,10 +12,6 @@ body {
   src: url("./fonts/klavika-bold-webfont.woff");
 }
 
-/* row {
-  border: 2px solid white;
-} */
-
 .main-table {
   display: table;
   flex-direction: column;
@@ -61,12 +57,6 @@ body {
 .tile14,
 .tile15 {
   border: 1px solid white;
-  
-  /* float: left;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  background: url("/images/monks.jpg") no-repeat 0 0 fixed; */
 }
 
 .tile1 {
@@ -74,9 +64,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 25% 25%;
-}  
+}
 
- .tile2 {
+.tile2 {
 }
 
 .tile3 {
@@ -116,4 +106,4 @@ body {
 }
 
 .tile15 {
-} */
+}

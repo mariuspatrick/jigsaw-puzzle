@@ -7,29 +7,36 @@
 //   cellTwo = temporaryCell;
 // }
 
-// function myMove() {
-//   let cell = document.getElementById("tile-4-15");
-//   let position = 0;
-//   let id = setInterval(move, 5);
-
-//   function move() {
-//     if (position == 190) {
-//       clearInterval(id);
-//     } else {
-//       position++;
-//       //   console.log("position", position);
-//       console.log("cell: ", cell);
-//       cell.style.left = position + "px";
-//       console.log("cell", cell.style);
-//       //   console.log("style", cell.style.left);
-//     }
-//   }
-// }
-
-let table = document.getElementById("table");
-
-let cell = document.getElementsByClassName("tile-1");
-
 // let rowsLength = table.getElementsByClassName("row-1").cell;
 
-console.log("table: ", cell);
+getElement = element => {
+  return document.getElementById(element);
+};
+
+function moveCell(firstCell, secondCell) {
+  console.log("firstCell: ", firstCell);
+  console.log("secondCell: ", getElement(secondCell));
+  if (getElement(secondCell).style.backgroundColor == "white") {
+    getElement(secondCell).innerHTML = getElement(firstCell).innerHTML;
+
+    getElement(firstCell).innerHTML = "";
+    getElement(secondCell).style.backgroundColor = getElement(
+      firstCell
+    ).style.backgroundColor;
+    getElement(firstCell).style.backgroundColor = "white";
+  } else {
+    console.log("Error! Try a different cell.");
+  }
+}
+
+function clickTile(row, column) {
+  let cell = document.getElementById("cell" + "-" + row + "-" + column);
+  let tile = cell.className;
+
+  console.log("cell: ", cell);
+
+  if (tile != "tile16") {
+  }
+}
+
+console.log("this is x: ", document.getElementById("table").row);
