@@ -3,8 +3,10 @@ body {
   justify-content: center;
   flex-direction: column;
   color: black;
-  background-image: url("./images/U3MuIV.png");
+  background: url("./images/U3MuIV.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
 }
 
 @font-face {
@@ -57,53 +59,126 @@ body {
 .tile14,
 .tile15 {
   border: 1px solid white;
+  height: 125px;
+  width: 125px;
 }
 
 .tile1 {
   background: url("./images/monks.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 25% 25%;
+  /* background-position: 964px 479px; */
+  cursor: pointer;
 }
 
 .tile2 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-position: 550px 479px; */
+  cursor: pointer;
 }
 
 .tile3 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-position: 551px 479px; */
+  cursor: pointer;
 }
 
 .tile4 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 552px 479px;
+  cursor: pointer;
 }
 
 .tile5 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 478px;
+  cursor: pointer;
 }
 
 .tile6 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 479px;
+  cursor: pointer;
 }
 
 .tile7 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 480px;
+  cursor: pointer;
 }
 
 .tile8 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile9 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile10 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile11 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile12 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile13 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile14 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
 
 .tile15 {
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 549px 481px;
+  cursor: pointer;
 }
