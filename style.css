@@ -6,7 +6,6 @@ body {
   background: url("./images/U3MuIV.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 10% 10%;
 }
 
 @font-face {
@@ -16,7 +15,7 @@ body {
 
 .main-table {
   display: table;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -59,126 +58,68 @@ body {
 .tile14,
 .tile15 {
   border: 1px solid white;
-  height: 125px;
-  width: 125px;
+  background: url("./images/monks.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
 }
 
 .tile1 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* background-position: 964px 479px; */
-  cursor: pointer;
+  background-position: 0% 0%;
 }
 
 .tile2 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* background-position: 550px 479px; */
-  cursor: pointer;
+  background-position: 33% 0%;
 }
 
 .tile3 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* background-position: 551px 479px; */
-  cursor: pointer;
+  background-position: 67% 0%;
 }
 
 .tile4 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 552px 479px;
-  cursor: pointer;
+  background-position: 100% 0%;
 }
 
 .tile5 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 478px;
-  cursor: pointer;
+  background-position: 0% 33%;
 }
 
 .tile6 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 479px;
-  cursor: pointer;
+  background-position: 33% 33%;
 }
 
 .tile7 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 480px;
-  cursor: pointer;
+  background-position: 66% 33%;
 }
 
 .tile8 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 100% 33%;
 }
 
 .tile9 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 0% 66%;
 }
 
 .tile10 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 33% 66%;
 }
 
 .tile11 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 66% 66%;
 }
 
 .tile12 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 100% 66%;
 }
 
 .tile13 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 0% 100%;
 }
 
 .tile14 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 33% 100%;
 }
 
 .tile15 {
-  background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 549px 481px;
-  cursor: pointer;
+  background-position: 66% 100%;
 }
