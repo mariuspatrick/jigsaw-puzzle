@@ -17,21 +17,42 @@ getElementStyle = element => {
   return document.getElementById(element).style;
 };
 
+switchStyles = (firstCell, secondCell) => {
+    let temporaryCell = getElementStyle(firstCell)
+    getElementStyle(firstCell) = 
+}
+
 function moveCell(firstCell, secondCell) {
   //Checks if secondCell has white background color and swaps cells
 
   if (getElementStyle(secondCell).backgroundColor == "white") {
-    getElement(secondCell).innerHTML = getElement(firstCell).innerHTML;
+    // getElement(secondCell).innerHTML = getElement(firstCell).innerHTML;
 
-    console.log("my table: ", document.getElementsByClassName("main-table"));
+    let temporaryCell = getElement(firstCell).className;
 
-    getElement(firstCell).innerHTML = "";
-    getElementStyle(secondCell).backgroundColor = getElementStyle(
-      firstCell
-    ).backgroundColor;
-    getElement(firstCell).style.backgroundColor = "white";
+    getElement(firstCell).className = getElement(secondCell).className;
+
+    getElement(secondCell).className = temporaryCell;
+
+    //console.log("my table: ", document.getElementsByClassName("main-table"));
+
+    // let row = document.getElementsByClassName(row);
+    // console.log("rows: ", row);
+
+    // let table = document.getElementsByClassName("row").rows.length;
+    // console.log("table", table);
+
+    console.log("this is the elem: ", getElement(secondCell).className);
+
+    // getElement(firstCell).innerHTML = "";
+
+    // getElementStyle(secondCell).backgroundColor = getElementStyle(
+    //   firstCell
+    // ).backgroundColor;
+    // getElementStyle(firstCell).backgroundColor = "white";
   } else {
     console.log("Error! Try a different cell.");
+    console.log("this is the elem: ", getElement(firstCell).className);
   }
 }
 
