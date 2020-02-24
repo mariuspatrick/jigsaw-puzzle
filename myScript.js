@@ -1,47 +1,51 @@
-// function swapTiles(firstCell, secondCell) {
-//   let temporaryCell = document.getElementById(firstCell).className;
-//   //   let cellOne = document.getElementById(firstCell);
-//   let cellTwo = document.getElementById(secondCell).className;
-
-//   document.getElementById(firstCell).className = cellTwo;
-//   cellTwo = temporaryCell;
-// }
-
-// let rowsLength = table.getElementsByClassName("row-1").cell;
-
 getElement = element => {
   return document.getElementById(element);
 };
 
-getElementBackground = element => {
-  return document.getElementById(element).style.background;
+getElementClassName = element => {
+  return document.getElementById(element).className;
 };
 
-getTileOnLocation = (row, column) => {
-  return getElementBackground(`"cell-"${row}"-"${column}`);
+tileIsWhite = tile => {
+  //   console.log("element style: ", getElement(tile).style);
+  //   if (getElement(tile).style.background == "white") return true;
+  if (getElementClassName(tile) == "tile16") return true;
 };
 
-switchStyles = (firstCell, secondCell) => {
-  let temporaryCell = getElementBackground(firstCell);
-  getElementBackground(firstCell) = getElementBackground(secondCell);
-  getElementBackground(secondCell) = temporaryCell;
+swapTiles = (firstCell, secondCell) => {
+  //Swaps tiles if second one is white
+
+  let temp = getElement(firstCell).className;
+
+  getElement(firstCell).className = getElement(secondCell).className;
+
+  getElement(secondCell).className = temp;
 };
 
-function moveCell(firstCell, secondCell) {
-  //Checks if secondCell has white background color and swaps cells
-
-  if (getElementBackground(secondCell) == "white") {
-    switchStyles(firstCell, secondCell);
-
-    console.log("this is the elem: ", getElement(firstCell).className);
-  } else {
-    console.log("Error! Try a different cell.");
-    console.log("this is the elem: ", getElement(firstCell).className);
+moveTile = (row, column) => {
+  //Checks tile on the right
+  if (tileIsWhite(`cell-${row}-${column + 1}`)) {
+    console.log("first tile: ", `cell-${row}-${column}`);
+    console.log("second tile: ", `cell-${row}-${column + 1}`);
+    swapTiles(`cell-${row}-${column}`, `cell-${row}-${column + 1}`);
+    return;
   }
-}
 
-// function clickTile(row, column) {
-//   for (let i = 1; i <= row; i++) {
-//     for (let j = 1; j <= column; j++) {}
-//   }
-// }
+  //Checks tile on the left
+  if (tileIsWhite(`cell-${row}-${column - 1}`)) {
+    swapTiles(`cell-${row}-${column}`, `cell-${row}-${column - 1}`);
+    return;
+  }
+
+  //Checks tile above
+  if (tileIsWhite(`cell-${row + 1}-${column}`)) {
+    swapTiles(`cell-${row}-${column}`, `cell-${row + 1}-${column}`);
+    return;
+  }
+
+  //Checks tile below
+  if (tileIsWhite(`cell-${row - 1}-${column}`)) {
+    swapTiles(`cell-${row}-${column}`, `cell-${row - 1}-${column}`);
+    return;
+  }
+};

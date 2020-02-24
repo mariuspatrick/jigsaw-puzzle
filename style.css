@@ -15,7 +15,6 @@ body {
 
 .main-table {
   display: table;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -56,10 +55,11 @@ body {
 .tile12,
 .tile13,
 .tile14,
-.tile15 {
+.tile15,
+.tile16 {
   border: 1px solid white;
   background: url("./images/monks.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   position: relative;
   cursor: pointer;
 }
@@ -122,4 +122,9 @@ body {
 
 .tile15 {
   background-position: 66% 100%;
+}
+
+.tile16 {
+  cursor: default;
+  background: white;
 }
