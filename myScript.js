@@ -2,19 +2,16 @@ getElement = element => {
   return document.getElementById(element);
 };
 
-getElementClassName = element => {
-  return document.getElementById(element).className;
-};
-
-tileIsWhite = tile => {
-  //   console.log("element style: ", getElement(tile).style);
-  //   if (getElement(tile).style.background == "white") return true;
-  if (getElementClassName(tile) == "tile16") return true;
+tileIsWhite = (row, column) => {
+  if (getElement(`cell-${row}-${column}`).className == "tile16") {
+    return true;
+  } else {
+    console.log("Error! Click a different tile");
+  }
 };
 
 swapTiles = (firstCell, secondCell) => {
   //Swaps tiles if second one is white
-
   let temp = getElement(firstCell).className;
 
   getElement(firstCell).className = getElement(secondCell).className;
@@ -23,29 +20,31 @@ swapTiles = (firstCell, secondCell) => {
 };
 
 moveTile = (row, column) => {
-  //Checks tile on the right
-  if (tileIsWhite(`cell-${row}-${column + 1}`)) {
-    console.log("first tile: ", `cell-${row}-${column}`);
-    console.log("second tile: ", `cell-${row}-${column + 1}`);
-    swapTiles(`cell-${row}-${column}`, `cell-${row}-${column + 1}`);
-    return;
+  if (column < 4) {
+    if (tileIsWhite(row, column + 1)) {
+      swapTiles(`cell-${row}-${column}`, `cell-${row}-${column + 1}`);
+      return;
+    }
   }
 
-  //Checks tile on the left
-  if (tileIsWhite(`cell-${row}-${column - 1}`)) {
-    swapTiles(`cell-${row}-${column}`, `cell-${row}-${column - 1}`);
-    return;
+  if (column > 1) {
+    if (tileIsWhite(row, column - 1)) {
+      swapTiles(`cell-${row}-${column}`, `cell-${row}-${column - 1}`);
+      return;
+    }
   }
 
-  //Checks tile above
-  if (tileIsWhite(`cell-${row + 1}-${column}`)) {
-    swapTiles(`cell-${row}-${column}`, `cell-${row + 1}-${column}`);
-    return;
+  if (row < 4) {
+    if (tileIsWhite(row + 1, column)) {
+      swapTiles(`cell-${row}-${column}`, `cell-${row + 1}-${column}`);
+      return;
+    }
   }
 
-  //Checks tile below
-  if (tileIsWhite(`cell-${row - 1}-${column}`)) {
-    swapTiles(`cell-${row}-${column}`, `cell-${row - 1}-${column}`);
-    return;
+  if (row > 1) {
+    if (tileIsWhite(row - 1, column)) {
+      swapTiles(`cell-${row}-${column}`, `cell-${row - 1}-${column}`);
+      return;
+    }
   }
 };
