@@ -3,7 +3,7 @@ body {
   justify-content: center;
   flex-direction: column;
   color: black;
-  background: url("./images/U3MuIV.png");
+  background: url("./images/background-image.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -133,7 +133,7 @@ h1 {
   align-self: center;
   border: 2px solid;
   border-radius: 10px;
-  color: blanchedalmond;
+  color: bisque;
   /* background-color: gray; */
   padding: 5px;
 }
